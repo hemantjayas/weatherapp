@@ -56,7 +56,7 @@ const BasicChart = () => {
     return (
         <>
             <div className="basicChart">
-<h1>{Math.floor(data[0].main.temp-273) +'°C' }</h1>
+{/* <h1>{Math.floor(data[0].main.temp-273) +'°C' }</h1> */}
 
                 <div className="row">
                     <div className="mixed-chart">
@@ -69,7 +69,7 @@ const BasicChart = () => {
                     </div>
                 </div>
 
-                <div className="pressure">
+                {/* <div className="pressure">
                     <div>
                         <p>Pressure</p>
                         <p>{(data[0].main.pressure) + ` hpa`}</p>
@@ -78,7 +78,7 @@ const BasicChart = () => {
                         <p>Humidity</p>
                         <p>{(data[0].main.humidity) + ` %`}</p>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </>
