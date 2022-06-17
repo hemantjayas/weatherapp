@@ -1,19 +1,24 @@
 .fiveday{
-    border: 1px solid red;
-    width: 50%;
+    width: 35%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    padding: 3px;
     align-items: center;
+    box-shadow: 1px 1px 7px 0px rgb(198, 194, 194) ;
+    box-sizing: border-box;
 }
 
 .fiveday div{
-    width: 70px;
-    border: 1px solid green;
+    width: 90px;
     text-align: center;
     font-weight: 600;
     padding: 4px;
     box-sizing: border-box;
+
+}
+.fiveday div p{
+  margin: 0;
 
 }
 .fiveday div img{
@@ -22,3 +27,12 @@
     padding: 5px;
 
 }
+
+
+@media only screen and (max-width: 600px) {
+    
+    .fiveday{
+        width: 90%;
+    }
+
+  }

@@ -1,6 +1,6 @@
 .basicChart{
     margin: auto;
-    width: 50%;
+    width: 35%;
     box-sizing: border-box;
     padding: 10px;
 
@@ -14,10 +14,28 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
-}
-.pressure div{
-    width: 300px;
-    height: 100px;
-    background-color: aqua;
+    text-align: left;
 
 }
+.pressure div{
+    width: 45%;
+    background-color: #dcf0fe;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    
+
+}
+.pressure div p{
+   margin: 0;
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .basicChart{
+        width: 90%;
+    }
+
+  }

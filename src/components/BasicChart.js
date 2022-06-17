@@ -66,7 +66,7 @@ const BasicChart = () => {
                             options={obj.options}
                             series={obj.series}
                             type="area"
-                            width="700"
+                            
                         />
                     </div>
                 </div>
