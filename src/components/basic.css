@@ -1,0 +1,23 @@
+.basicChart{
+    margin: auto;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+.basicChart h1{
+    text-align: left;
+}
+
+.pressure{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.pressure div{
+    width: 300px;
+    height: 100px;
+    background-color: aqua;
+
+}

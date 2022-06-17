@@ -1,0 +1,24 @@
+.fiveday{
+    border: 1px solid red;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fiveday div{
+    width: 70px;
+    border: 1px solid green;
+    text-align: center;
+    font-weight: 600;
+    padding: 4px;
+    box-sizing: border-box;
+
+}
+.fiveday div img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+
+}
