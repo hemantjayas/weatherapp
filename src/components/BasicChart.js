@@ -25,8 +25,6 @@ const BasicChart = () => {
             console.log(item)
         }
     });
-    console.log("yahi hai kya")
-    console.log(arr)
 
 
 

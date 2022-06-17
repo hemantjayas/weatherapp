@@ -7,7 +7,6 @@ import rainy from "./images/rainy.png"
 const Fiveday = () => {
 
     const { data } = useSelector((store) => store.Data);
-    console.log(data);
    
     const  getDayName = (dateStr, locale)=>{
         let date = new Date(dateStr);
