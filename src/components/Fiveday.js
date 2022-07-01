@@ -25,7 +25,7 @@ const Fiveday = () => {
 
                 <div key={i} >
                     <p>{getDayName(item.dt_txt.split(" ")[0], "en-US")}</p>
-                    <p>{`${(item.main.temp_min-273).toFixed(0)+'°C'} ${(item.main.temp_max-273).toFixed(0)+'°C'}` }</p>
+                    <p>{`${(item.main.temp_min-273).toFixed(0)+'°'} ${(item.main.temp_max-273).toFixed(0)+'°'}` }</p>
                     <img src={(item.weather[0].main==="Rain")? rainy : (item.weather[0].main==="Clear")? sunny:cloudy } alt="" />
                     <p>{item.weather[0].main}</p>
 

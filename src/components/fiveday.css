@@ -1,5 +1,5 @@
 .fiveday{
-    width: 35%;
+    width: 50%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -7,6 +7,7 @@
     align-items: center;
     box-shadow: 1px 1px 7px 0px rgb(198, 194, 194) ;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .fiveday div{

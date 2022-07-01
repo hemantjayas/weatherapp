@@ -17,17 +17,18 @@ const Searchbar = () => {
     const getdatafromAPI = () => {
         fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=6d8c931c766b7e9eeb84a8f6e42f5fc2`).then(d => d.json()).then((res) => {
             dispatch(getData(res.list))
-            // console.log(res.list);
+            console.log(res);
         });
     }
 
-
+    
+    
 
     return (
         <div className='search'>
             <input onInput={(e) => {
                 setCity(e.target.value)
-            }} type="text" placeholder='Search' />
+            }} type="text" placeholder='Search'/>
             <img id='pin' src={pin} alt="" />
             <img onClick={() => {
                 getdatafromAPI()
