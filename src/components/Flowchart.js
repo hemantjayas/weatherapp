@@ -12,21 +12,28 @@ const Flowchart = () => {
                     enabled: false,
                 }
             },
-            datalabels: {
+            dataLabels: {
                 enabled: false,
             },
-            stroke: { curve: "smooth" },
-            grid: {
-                show: false,
-                xaxis: {
-                    lines: { show: false },
-                    categories: [1,2,3],
-                },
-                yaxis: {
-                    show: true
+            stroke: {
+                 curve: "smooth",
+                 width:2
 
-                },
+                 },
+
+            xaxis: {
+                lines: { show: false },
+                categories: [1, 2, 3],
             },
+            yaxis: {
+                show: false
+
+            },
+
+            grid:{
+                show:false
+            },
+
             colors: ['#fedd4b']
         },
         series: [

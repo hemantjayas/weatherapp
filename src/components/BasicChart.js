@@ -22,7 +22,7 @@ const BasicChart = () => {
 
 
     const { data } = useSelector((store) => store.Data);
-    console.log(data);
+    // console.log(data);
     const arr = [];
     const time = []
     
@@ -36,8 +36,8 @@ const BasicChart = () => {
 
 
     });
-    console.log(arr)
-    console.log(time)
+    // console.log(arr)
+    // console.log(time)
 
 
 
@@ -45,14 +45,18 @@ const BasicChart = () => {
     const obj = {
         options: {
             chart: {
-                // id: "basic-bar",
+                id: "basic-bar",
                 type: "area",
                 zoom: {
                     enabled: false,
-                }
+                },
+               
             },
-            datalabels: { enabled: false },
-            stroke: { curve: "smooth" },
+            dataLabels: {enabled:false},
+            stroke: { curve: "smooth",
+            lineCap:"round"
+        
+        },
             xaxis: {
                 type: "datetime",
                 categories: time,
