@@ -4,21 +4,26 @@ import searchimg from "../images/search.png";
 import pin from '../images/pin.png';
 import '../search/Search.css';
 import { GEO_CITY_URL, geoCityOptions } from './api';
-import { AsyncPaginate } from 'react-select-async-paginate';
 import { useCallback } from 'react';
 
 export default function Search({ onSearchChange }) {
-    const [search, setSearch] = useState(null);
+    const [search, setSearch] = useState();
+    const [inputValue, setinputValue] = useState(undefined);
+    const [trigger, settrigger] = useState(true);
+
 
     const handleOnChange = (e) => {
-        const searchData = e.target.value;
-        console.log(searchData)
+        const { value } = e.target;
+        // console.log(e.target.value)
+        // console.log({value});
 
-        fetch(`${GEO_CITY_URL}/cities?&minPopulation=300000&namePrefix=${searchData}`, geoCityOptions)
+
+
+        fetch(`${GEO_CITY_URL}/cities?&minPopulation=300000&namePrefix=${value}`, geoCityOptions)
             .then(response => response.json())
             .then(response => {
                 setSearch(response.data);
-                console.log(search)
+
             })
             .catch(err => console.error(err));
         // console.log(search)
@@ -37,17 +42,26 @@ export default function Search({ onSearchChange }) {
         }
     }
 
+    const handleSearchResult = (el) => {
+        console.log(el);
+        setinputValue(`${el.city}, ${el.region}, ${el.countryCode}`);
+        settrigger(false)
+
+
+
+    }
+
     const optimisedVersion = useCallback(debounce(handleOnChange), [])
 
-
+    console.log(search)
     return (
         <div className='search'>
-            <input type="text" placeholder='Search' onChange={optimisedVersion} />
+            <input type="text" placeholder='Search' value={inputValue} onChange={optimisedVersion} />
             <img id='pin' src={pin} alt="" />
             <img id='searchimg' src={searchimg} alt="" />
 
             {search?.length > 0 &&
-                <div className='autoComplete'>{search?.map((el, i) => <h4 key={i}>{`${el.city}, ${el.region}, ${el.countryCode}`}</h4>)}</div>
+                <div className={trigger ? "autoComplete" : "endComplete"}>{search?.map((el, i) => <h4 onClick={() => { handleSearchResult(el) }} key={i}>{`${el.city}, ${el.region}, ${el.countryCode}`}</h4>)}</div>
             }
         </div>
     )

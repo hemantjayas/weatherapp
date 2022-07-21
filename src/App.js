@@ -1,5 +1,6 @@
 import './App.css';
 import Search from './components/search/Search';
+import Location from './components/Location';
 
 
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Search onSearchChange={handleOnSearchChange} />
+      <Location/>
 
     </div>
   );
