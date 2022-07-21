@@ -1,15 +1,17 @@
 import './App.css';
-import BasicChart from './components/BasicChart';
-import Fiveday from './components/Fiveday';
-import Searchbar from './components/Searchbar';
+import Search from './components/search/Search';
+
+
 
 function App() {
+
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData)
+  }
   return (
     <div className="App">
-    <Searchbar/>
-    <Fiveday/>
-    <BasicChart/>
-    
+      <Search onSearchChange={handleOnSearchChange} />
+
     </div>
   );
 }
