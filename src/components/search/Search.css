@@ -11,23 +11,19 @@
 
 }
 
-.search input {
-    padding: 0 45px !important;
-    font-size: 16px;
+/* .search input {
     font-weight: 600 !important;
-    width: 100%;
-    height: 45px;
     margin-bottom: 5px;
     box-sizing: border-box;
-    border: none;
+    border: none;   
     border-radius: 7px;
-}
+} */
 
 #pin {
     position: absolute;
-    top: 16px;
+    top: 13px;
     left: 15px;
-    width: 22px;
+    width: 20px;
 }
 
 #searchimg {
@@ -47,7 +43,9 @@
 }
 
 .css-319lph-ValueContainer {
-   padding: 0 40px !important;
+    padding: 0 40px !important;
+    height: 45px !important;
+   
 }
 
 .css-1okebmr-indicatorSeparator {
