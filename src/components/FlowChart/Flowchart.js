@@ -61,6 +61,8 @@ const Flowchart = ({data}) => {
                         series={obj.series}
                         type="area"
                         height="200px"
+                        width="300px"
+                        margin="auto"
 
 
                     />

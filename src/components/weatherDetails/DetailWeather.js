@@ -12,9 +12,7 @@ export default function DetailWeather({ data }) {
 
     }
 
-    const handleForecast = (el) => {
-        console.log(el);
-    }
+   
 
     return (
 
@@ -22,7 +20,7 @@ export default function DetailWeather({ data }) {
             <div className="forecast">
                 {data?.daily?.map((el, i) => (
 
-                    <div onClick={handleForecast} key={i} >
+                    <div key={i} >
                         <p>{dates(el.dt)[0]}</p>
                         <p>{`${(el.temp.min).toFixed(0) + '°'} ${(el.temp.max).toFixed(0) + '°'}`}</p>
                         <img src={(el.weather[0].main === "Rain") ? rainy : (el.weather[0].main === "Clear") ? sunny : cloudy} alt="" />

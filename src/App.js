@@ -50,7 +50,7 @@ function App() {
     <div className="App">
 
       <Search onSearchChange={handleOnSearchChange} />
-      {weatherData && <DetailWeather data={weatherData} />}
+      {/* {weatherData && <DetailWeather data={weatherData} />} */}
       {weatherData && <BasicChart data={weatherData} />}
 
     </div>

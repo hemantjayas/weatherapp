@@ -1,77 +1,153 @@
-.basicChart{
+.basicChart {
     margin: 20px auto;
-    width: 50%;
+    width: 45%;
     box-sizing: border-box;
     padding: 10px;
-    box-shadow: 1px 1px 7px 0px rgb(198, 194, 194) ;
+    box-shadow: 1px 1px 7px 0px rgb(198, 194, 194);
     box-sizing: border-box;
     border-radius: 5px;
     /* padding: 5px; */
 
 }
-#forcast{
+
+.daychart{
+    overflow-x: scroll;
+}
+#apexchartsbasicxbar{
+    margin: auto;
+    flex: 0 0 auto;
+}
+
+#forcast {
     display: flex;
     column-gap: 20px;
     align-items: center;
 
 }
 
-#forcast img{
+#forcast img {
     width: 50px;
     height: 50px;
 }
- #forcast h1{
+
+#forcast h1 {
     text-align: left;
     font-size: 50px;
     margin: 5px;
-    
+
 }
 
-.pressure{
+.pressure {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    margin:10px auto;
     text-align: left;
+    
 
 }
-.pressure div{
+
+.pressure div {
     width: 49%;
-    background-color:#f3fbff;
+    background-color: #f3fbff;
     padding: 10px;
     box-sizing: border-box;
-    
-
-}
-p, h4{
-   margin: 0;
+    border-radius: 3px;
 
 
 }
 
+p, h4 {
+    margin: 0;
 
-#sunrise{
+
+}
+
+
+#sunrise {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#sunrise div{
+
+#sunrise div {
     margin: 30px 0;
     width: 10%;
     text-align: center;
-   
+
+}
+
+
+.forecast {
+    width: 45%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    box-shadow: 1px 1px 7px 0px rgb(198, 194, 194);
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+
+.dayForecast {
+    width: 90px;
+    text-align: center;
+    font-weight: 600;
+    padding: 4px;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+
+}
+
+.dayForecastOnclick {
+    border: 3px solid rgb(17, 149, 236);
+    width: 90px;
+    text-align: center;
+    font-weight: 600;
+    padding: 4px;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+
+}
+
+.forecast div p {
+    margin: 0;
+
+}
+
+.forecast div img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+
 }
 
 
 @media only screen and (max-width: 600px) {
-    
-    .basicChart{
+
+    .forecast {
         width: 90%;
     }
 
-    #sunrise div{
-        width: 17%;
-       
+    .forecast div {
+        width: 85px;
     }
 
-  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .basicChart {
+        width: 90%;
+    }
+
+    #sunrise div {
+        width: 20%;
+
+    }
+
+}
