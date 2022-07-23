@@ -11,17 +11,19 @@
 
 }
 
-/* .search input {
+.search input {
     font-weight: 600 !important;
     margin-bottom: 5px;
     box-sizing: border-box;
     border: none;   
     border-radius: 7px;
-} */
+    height: 45px !important;
+
+}
 
 #pin {
     position: absolute;
-    top: 13px;
+    top: 17px;
     left: 15px;
     width: 20px;
 }
@@ -44,26 +46,27 @@
 
 .css-319lph-ValueContainer {
     padding: 0 40px !important;
-    height: 45px !important;
-   
+    
 }
 
 .css-1okebmr-indicatorSeparator {
     display: none;
-   
+    
 }
 
 .css-14el2xx-placeholder {
     font-weight: 600 !important; 
     color: hsl(0deg 2% 38%) !important;
-
+    
 }
 
 .css-1d8n9bt {
-   
+    
     padding: 2px 43px !important;
     
 }
+
+
 
 
 /* async paginate style */
