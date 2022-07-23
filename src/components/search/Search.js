@@ -39,7 +39,7 @@ export default function Search({ onSearchChange }) {
         <div className='search'>
             <AsyncPaginate
                 placeholder="Search"
-                debounceTimeout={1000}
+                debounceTimeout={600}
                 value={search}
                 onChange={handleOnChange}
                 loadOptions={loadOptions}

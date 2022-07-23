@@ -8,14 +8,16 @@
     box-shadow: 1px 1px 7px 0px rgb(198, 194, 194) ;
     box-sizing: border-box;
     border-radius: 5px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
 }
 
 .forecast div{
-    width: 90px;
+    width: 100px;
     text-align: center;
     font-weight: 600;
     padding: 4px;
-    box-sizing: border-box;
+    flex: 0 0 auto;
 
 }
 .forecast div p{

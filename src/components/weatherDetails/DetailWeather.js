@@ -2,17 +2,18 @@ import React from 'react';
 import '../weatherDetails/DetailWeather.css';
 import rainy from '../images/rainy.png';
 import sunny from '../images/sunny.png';
+import Chart from "react-apexcharts";
 import cloudy from '../images/cloudy.png';
-import BasicChart from '../BasicChart';
 
-export default function DetailWeather({ data }) {
-    console.log(data?.daily)
+export default function DetailWeather({data}) {
     const dates = (timeStamp) => {
         const date = new Date(timeStamp * 1000).toDateString().split(" ");
         return date
 
     }
+
     return (
+
         <div>
             <div className="forecast">
                 {data?.daily?.map((el, i) => (
@@ -26,10 +27,7 @@ export default function DetailWeather({ data }) {
                     </div>
                 ))}
             </div>
-
-            <BasicChart hourlyData={data?.hourly} />
-
-
         </div>
+
     )
 }
