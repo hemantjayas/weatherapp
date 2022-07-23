@@ -8,19 +8,28 @@ import Flowchart from "../FlowChart/Flowchart";
 
 
 const BasicChart = ({ data }) => {
+const [weather, setweather] = useState(data.current.weather[0].main);
+const [currentTemp, setcurrentTemp] = useState(data.current.temp);
+const [pressure, setpressure] = useState(data.current.pressure);
+const [humidity, sethumidity] = useState(data.current.humidity);
+const [sunrise, setsunrise] = useState(data.current.sunrise);
+const [sunset, setsunset] = useState(data.current.sunset);
+const [allDayTemp, setallDayTemp] = useState(data.daily[0].temp);
+    // console.log(data);
     const [tracker, setTracker] = useState();
+
     const temp = [];
     const time = [];
     function timeArray(timeStamp) {
         let timer = new Date(timeStamp * 1000);
         return timer.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
     }
-
+    
     data.hourly.map((el, i) => {
-        if (i < 24) {
+        if (i < 12) {
             temp.push(el.temp);
             time.push(timeArray(el.dt))
-
+            
         }
 
     });
@@ -51,19 +60,39 @@ const BasicChart = ({ data }) => {
             }
         ]
     }
-
+    
     const dates = (timeStamp) => {
         const date = new Date(timeStamp * 1000).toDateString().split(" ");
         return date
-
+        
     }
+
+
+    
 
     const handleForecast = (el, i) => {
         console.log(i);
         setTracker(i)
+        console.log(el)
+        setweather(el.weather[0].main)
+        setcurrentTemp(el.temp.min);
+        // weather = el.weather[0].main;
+        setpressure(el.pressure);
+        sethumidity(el.humidity);
+        setsunrise(el.sunrise);
+        setsunset(el.sunset);
+        setallDayTemp(el.temp);
     }
+    
+  
+     
 
 
+      
+
+    
+
+    
     return (
         <div>
 
@@ -80,17 +109,10 @@ const BasicChart = ({ data }) => {
                 ))}
             </div>
 
-
-
-
-
-
-
-
             <div className="basicChart">
                 <div id="forcast">
-                    <h1>{`${(data.current.temp).toFixed(0)}°C`}</h1>
-                    <img src={(data.current.weather[0].main === "Rain") ? rainy : (data.current.weather[0].main === "Clear") ? sunny : cloudy} alt="" />
+                    <h1>{`${(currentTemp).toFixed(0)}°C`}</h1>
+                    <img src={(weather === "Rain") ? rainy : (weather === "Clear") ? sunny : cloudy} alt="" />
 
                 </div>
 
@@ -111,25 +133,25 @@ const BasicChart = ({ data }) => {
                 <div className="pressure">
                     <div>
                         <h4>Pressure</h4>
-                        <p>{`${data.current.pressure} hpa`}</p>
+                        <p>{`${pressure} hpa`}</p>
                     </div>
                     <div>
                         <h4>Humidity</h4>
-                        <p>{`${data.current.humidity} %`}</p>
+                        <p>{`${humidity} %`}</p>
                     </div>
                 </div>
                 <div id="sunrise">
                     <div >
                         <h4>Sunrise</h4>
-                        <p>{`${timeArray(data.current.sunrise)}`}</p>
+                        <p>{`${timeArray(sunrise)}`}</p>
                     </div>
                     <div>
                         <h4>Sunset</h4>
-                        <p>{`${timeArray(data.current.sunset)}`}</p>
+                        <p>{`${timeArray(sunset)}`}</p>
                     </div>
                 </div>
 
-                <Flowchart data={data} />
+                <Flowchart data={allDayTemp} />
             </div>
 
         </div>

@@ -7,3 +7,9 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+    .flowchart div{
+        overflow: auto;
+    }
+    
+}

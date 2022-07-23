@@ -11,7 +11,8 @@
 }
 
 .daychart{
-    overflow-x: scroll;
+    overflow-x: auto;
+    box-sizing: border-box;
 }
 #apexchartsbasicxbar{
     margin: auto;

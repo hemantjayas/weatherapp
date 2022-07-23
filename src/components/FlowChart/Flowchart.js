@@ -4,13 +4,8 @@ import "./flowchart.css"
 
 
 const Flowchart = ({data}) => {
-    let temp = {}
-    data.daily.map((el,i)=>{
-        if (i<1) {
-            temp = el.temp
-        }
-    });
-    
+    // console.log(data)
+
     const obj = {
         options: {
             chart: {
@@ -46,7 +41,7 @@ const Flowchart = ({data}) => {
         series: [
             {
                 name: "Temprature",
-                data: [temp.min,temp.max, temp.eve, temp.night]
+                data: [data.min,data.max, data.eve, data.night]
             }
         ]
     }
@@ -61,7 +56,7 @@ const Flowchart = ({data}) => {
                         series={obj.series}
                         type="area"
                         height="200px"
-                        width="300px"
+                        width="500px"
                         margin="auto"
 
 
