@@ -8,13 +8,13 @@ import Flowchart from "../FlowChart/Flowchart";
 
 
 const BasicChart = ({ data }) => {
-const [weather, setweather] = useState(data.current.weather[0].main);
-const [currentTemp, setcurrentTemp] = useState(data.current.temp);
-const [pressure, setpressure] = useState(data.current.pressure);
-const [humidity, sethumidity] = useState(data.current.humidity);
-const [sunrise, setsunrise] = useState(data.current.sunrise);
-const [sunset, setsunset] = useState(data.current.sunset);
-const [allDayTemp, setallDayTemp] = useState(data.daily[0].temp);
+const weather = data.current.weather[0].main;
+const currentTemp=data.current.temp;
+const pressure =data.current.pressure;
+const humidity =data.current.humidity;
+const sunrise = data.current.sunrise;
+const sunset = data.current.sunset;
+const allDayTemp = data.daily[0].temp;
     // console.log(data);
     const [tracker, setTracker] = useState();
 
@@ -71,17 +71,7 @@ const [allDayTemp, setallDayTemp] = useState(data.daily[0].temp);
     
 
     const handleForecast = (el, i) => {
-        console.log(i);
         setTracker(i)
-        console.log(el)
-        setweather(el.weather[0].main)
-        setcurrentTemp(el.temp.min);
-        // weather = el.weather[0].main;
-        setpressure(el.pressure);
-        sethumidity(el.humidity);
-        setsunrise(el.sunrise);
-        setsunset(el.sunset);
-        setallDayTemp(el.temp);
     }
     
   
