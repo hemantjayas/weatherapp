@@ -1,7 +1,6 @@
 import './App.css';
 import Search from './components/search/Search';
 import { useState, useEffect } from 'react';
-import DetailWeather from './components/weatherDetails/DetailWeather';
 import { WEATHER_API, WEATHER_API_KEY } from './components/api'
 import BasicChart from './components/currentWeather/BasicChart';
 
