@@ -7,6 +7,7 @@ import BasicChart from './components/currentWeather/BasicChart';
 
 
 function App() {
+  const [toggle,setToggle] = useState(true)
   const [weatherData, setWeatherData] = useState();
 
   function getLocation() {
@@ -34,6 +35,7 @@ function App() {
   }, []);
 
   const handleOnSearchChange = (searchData) => {
+    setToggle(true)
     const [lati, longi] = searchData.value.split(" ");
     fetch(`${WEATHER_API}/onecall?lat=${lati}&lon=${longi}&exclude=minutely,alerts&appid=${WEATHER_API_KEY}&units=metric`)
       .then(d => d.json())
@@ -50,7 +52,7 @@ function App() {
 
       <Search onSearchChange={handleOnSearchChange} />
       {/* {weatherData && <DetailWeather data={weatherData} />} */}
-      {weatherData && <BasicChart data={weatherData} />}
+      {weatherData && <BasicChart data={weatherData} toggle = {toggle} setToggle = {setToggle}  />}
 
     </div>
   );

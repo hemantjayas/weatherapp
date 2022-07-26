@@ -1,6 +1,6 @@
 .basicChart {
     margin: 20px auto;
-    width: 45%;
+    width: 50%;
     box-sizing: border-box;
     padding: 10px;
     box-shadow: 1px 1px 7px 0px rgb(198, 194, 194);
@@ -80,7 +80,7 @@ p, h4 {
 
 
 .forecast {
-    width: 45%;
+    width: 50%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -97,7 +97,7 @@ p, h4 {
     width: 90px;
     text-align: center;
     font-weight: 600;
-    padding: 4px;
+    padding: 5px;
     flex: 0 0 auto;
     box-sizing: border-box;
 
@@ -108,7 +108,7 @@ p, h4 {
     width: 90px;
     text-align: center;
     font-weight: 600;
-    padding: 4px;
+    padding: 5px;
     flex: 0 0 auto;
     box-sizing: border-box;
     background-color: #fffdf7;

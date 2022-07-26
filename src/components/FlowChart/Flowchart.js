@@ -4,7 +4,6 @@ import "./flowchart.css"
 
 
 const Flowchart = ({data}) => {
-    // console.log(data)
 
     const obj = {
         options: {
@@ -56,7 +55,7 @@ const Flowchart = ({data}) => {
                         series={obj.series}
                         type="area"
                         height="200px"
-                        width="500px"
+                        
                         margin="auto"
 
 
