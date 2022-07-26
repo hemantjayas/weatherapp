@@ -84,7 +84,7 @@ p, h4 {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 5px;
+    padding: 6px;
     align-items: center;
     box-shadow: 1px 1px 7px 0px rgb(198, 194, 194);
     box-sizing: border-box;
